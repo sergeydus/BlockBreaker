@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/DarkKhaki">
+    <TextView
+        android:hint="inviter name Has requested a game"
+        android:id="@+id/InviterNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/AcceptInviteButton"
+        android:layout_below="@+id/InviterNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Accept"/>
+    <Button
+        android:id="@+id/DeclineInvitationButton"
+        android:layout_below="@id/InviterNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/AcceptInviteButton"
+        android:text="Decline"/>
+</RelativeLayout>

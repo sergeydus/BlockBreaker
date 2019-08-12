@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LobbyActivity"
+    android:weightSum="100"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:weightSum="100"
+        android:orientation="horizontal">
+        <ListView
+            android:layout_width="0dp"
+            android:id="@+id/ChatListView"
+            android:layout_height="match_parent"
+            android:layout_weight="70"></ListView>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:hint="username"
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:hint="losses"
+                android:id="@+id/LosesTextView"
+                android:layout_below="@id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:hint="Wins"
+                android:id="@+id/WinsTextView"
+                android:layout_below="@id/LosesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_centerHorizontal="true"
+                android:id="@+id/JoinQueueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WinsTextView"
+                android:text="Find Match"/>
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/UsersListView"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/JoinQueueButton"></ListView>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <EditText
+            android:id="@+id/lobbyEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="90">
+        </EditText>
+        <Button
+            android:id="@+id/SendTextButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=">"
+            android:layout_weight="10"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "282731540362",
+    "firebase_url": "https://block-breaker-project.firebaseio.com",
+    "project_id": "block-breaker-project",
+    "storage_bucket": "block-breaker-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282731540362:android:ac671d01e99661b9",
+        "android_client_info": {
+          "package_name": "com.example.blockbreaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282731540362-iagvlqef5a3u715j24oacbuddologq87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blockbreaker",
+            "certificate_hash": "aa3216f172fe9d6e8bb457ae4ec39aff1b66529e"
+          }
+        },
+        {
+          "client_id": "282731540362-l2gtvtq433t0gbrv7liotcktpgh3n5fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsQ0zrCDtVHMgBmLZtM4xixu3tmd4-_QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282731540362-l2gtvtq433t0gbrv7liotcktpgh3n5fi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
