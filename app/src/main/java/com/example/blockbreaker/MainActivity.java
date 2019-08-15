@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements NicknameDialog.Ni
     public static Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://192.168.1.20:3004");
+            mSocket = IO.socket("http://192.168.1.37:3004");
         } catch (URISyntaxException e) {
             Log.e("SocketIo",e.getMessage());
         }

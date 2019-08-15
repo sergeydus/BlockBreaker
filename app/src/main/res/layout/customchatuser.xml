@@ -6,15 +6,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/UserList"
-        android:gravity="center"
-        android:background="@drawable/bordersdrawable">
+        android:id="@+id/UserListChat"
+        android:background="@drawable/bordersdrawablechat">
         <TextView
 
-        android:hint="name"
-        android:id="@+id/UserListItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            android:hint="name"
+            android:id="@+id/UserListItemChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </LinearLayout>

@@ -185,8 +185,8 @@ public class LobbyActivity extends AppCompatActivity {
     class CustomChatAdapter extends ArrayAdapter<ChatMessage>{
         ArrayList<ChatMessage> messages;
         public CustomChatAdapter(ArrayList<ChatMessage> messages){
-            super(LobbyActivity.this,R.layout.customuser);
-            Log.e("AdapterUser",(messages==null)?"Null":"not null");
+            super(LobbyActivity.this,R.layout.customchatuser);
+            Log.e("AdapterUserChat",(messages==null)?"Null":"not null");
             this.messages=messages;
         }
 
@@ -204,9 +204,9 @@ public class LobbyActivity extends AppCompatActivity {
         public View getView(final int position, View recycledView, ViewGroup listView) {
             if(recycledView == null){
                 recycledView = LayoutInflater.from(getContext())
-                        .inflate(R.layout.customuser,null);
+                        .inflate(R.layout.customchatuser,null);
             }
-            TextView username= recycledView.findViewById(R.id.UserListItem);
+            TextView username= recycledView.findViewById(R.id.UserListItemChat);
             username.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

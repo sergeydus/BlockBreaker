@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +36,8 @@ public class InviteDialog extends Dialog implements
         Log.e("IS it null?",(AcceptButton==null)?("is null"):("not null"));
         AcceptButton.setOnClickListener(this);
         DeclineButton.setOnClickListener(this);
+        TextView text =(TextView) findViewById(R.id.InviterNameTextView);
+        text.setText(inviterName+" has challenged you!");
 
     }
 

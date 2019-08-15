@@ -11,43 +11,51 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@color/Aqua"
+        android:background="#A9FFF7"
         android:weightSum="10"
         android:gravity="center"
         android:orientation="horizontal">
         <RelativeLayout
+            android:background="@drawable/layout_shapelogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:background="#FFFFFF">
-            <RelativeLayout
+            android:layout_weight="7">
+            <LinearLayout
                 android:layout_margin="20px"
+                android:orientation="vertical"
                 android:layout_marginBottom="2dp"
                 android:id="@+id/userlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/usertextview"
-                    android:layout_width="70dp"
+                    android:textSize="25sp"
+                    android:layout_width="125sp"
                     android:layout_height="wrap_content"
-
+                    android:layout_gravity="center"
                     android:text="Username:" />
 
                 <EditText
                     android:id="@+id/username_edittext"
+                    android:textSize="25sp"
+                    android:inputType="textEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/usertextview"
-                    android:background="#9E9E9E"/>
-            </RelativeLayout>
-            <RelativeLayout
+                    android:background="#B8E1FF"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_margin="20px"
+                android:orientation="vertical"
+                android:id="@+id/infolayout"
                 android:layout_below="@+id/userlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/userpassview"
-                    android:layout_width="70dp"
+                    android:layout_width="125sp"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:text="Password:" />
                 <EditText
@@ -56,23 +64,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/userpassview"
-                    android:background="#9E9E9E"/>
+                    android:textSize="25sp"
+                    android:background="#B8E1FF"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="20px"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infolayout">
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/SubmitButton"
-                    android:layout_below="@id/password_edittext"
                     android:layout_alignParentEnd="true"
+                    android:background="#B8E1FF"
                     android:text="Submit"
                     />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/password_edittext"
                     android:layout_alignParentStart="true"
                     android:text="Register"
+                    android:background="#B8E1FF"
                     android:id="@+id/RegisterButton"
                     />
+
             </RelativeLayout>
 
         </RelativeLayout>
