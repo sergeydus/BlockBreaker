@@ -22,7 +22,7 @@ public class GameView extends View {
     final float boardXsize=600;//server canvas x size
     public Board myboard=null;
     Bitmap win=BitmapFactory.decodeResource(getResources(), R.drawable.win);
-    Bitmap lose=BitmapFactory.decodeResource(getResources(), R.drawable.win);
+    Bitmap lose=BitmapFactory.decodeResource(getResources(), R.drawable.lose);
 
     public GameView(Context context) {
         super(context);

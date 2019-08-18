@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -65,6 +66,7 @@ public class LobbyActivity extends AppCompatActivity {
                     try {
                         boolean res=(boolean)((JSONObject)args[0]).get("HasAccepted");
                         if(res==true){
+                            MatchDialog.check=false;
                             Intent intent = new Intent(LobbyActivity.this, GameActivity.class);
                             startActivity(intent);
                         }
@@ -105,6 +107,7 @@ public class LobbyActivity extends AppCompatActivity {
             });
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,7 +173,10 @@ public class LobbyActivity extends AppCompatActivity {
                         .inflate(R.layout.customuser,null);
             }
             TextView username= recycledView.findViewById(R.id.UserListItem);
-            username.setOnClickListener(new View.OnClickListener() {
+            TextView stats=recycledView.findViewById(R.id.UserListItemStats);
+            LinearLayout userclick = recycledView.findViewById(R.id.UserList);
+
+            userclick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.e("clickity",players.get(position).nickname);
@@ -178,6 +184,7 @@ public class LobbyActivity extends AppCompatActivity {
                 }
             });
             username.setText(players.get(position).nickname);
+            stats.setText("Wins: "+players.get(position).details.wins.toString()+"\n"+"Losses: "+players.get(position).details.losses.toString());
 //            Log.e("pos"+position,players.get(position).toString());
             return recycledView;
         }

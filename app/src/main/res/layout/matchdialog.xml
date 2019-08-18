@@ -9,7 +9,7 @@
         android:id="@+id/MultiplayerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Multiplayer"
+        android:text="QuickMatch"
         android:background="@color/Beige"/>
     <Button
         android:padding="10dp"

@@ -51,11 +51,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/WinsTextView"
                 android:text="Find Match"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online Users:"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/JoinQueueButton"
+                android:id="@+id/OnlinePlayersText"/>
             <ListView
                 android:layout_width="match_parent"
                 android:id="@+id/UsersListView"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/JoinQueueButton"></ListView>
+                android:layout_below="@id/OnlinePlayersText"></ListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click on a player to challenge them!"
+                android:layout_below="@id/UsersListView"
+                android:id="@+id/OnlinePlayersClickHint"/>
 
         </RelativeLayout>
     </LinearLayout>
