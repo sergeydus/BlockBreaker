@@ -141,6 +141,9 @@ public class GameView extends View {
     }
     private void DrawRectangles(Canvas canvas){
         Paint paint = new Paint();
+        Paint Strokepaint= new Paint();
+        Strokepaint.setStyle(Paint.Style.STROKE);
+        Strokepaint.setStrokeWidth(10);
 //        Log.e("Rectangles",myboard.board.blocks.toString());
         for(int i=0;i<myboard.board.blocks.size();i++){
             paint.setShader(null);
@@ -166,6 +169,14 @@ public class GameView extends View {
                         myboard.board.blocks.get(i).posx+myboard.board.blocks.get(i).width,
                         myboard.board.blocks.get(i).posy+myboard.board.blocks.get(i).height,colors,positions,  Shader.TileMode.MIRROR));
             }
+            canvas.drawRoundRect(ConvertToDeviceSize(this.myboard.board.blocks.get(i).height,
+                    this.myboard.board.blocks.get(i).width,
+                    this.myboard.board.blocks.get(i).posx,
+                    this.myboard.board.blocks.get(i).posy),
+                    12,
+                    12,
+                    Strokepaint
+            );
             canvas.drawRoundRect(ConvertToDeviceSize(this.myboard.board.blocks.get(i).height,
                     this.myboard.board.blocks.get(i).width,
                     this.myboard.board.blocks.get(i).posx,

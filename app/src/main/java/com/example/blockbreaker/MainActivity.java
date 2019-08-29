@@ -34,12 +34,14 @@ public class MainActivity extends AppCompatActivity implements NicknameDialog.Ni
     public String username = "admin";
     public String password = "admin";
     private FirebaseAuth mAuth;
+    boolean isLoggedIn=false;
     public static float sumTotal;
 
     public static Socket mSocket;
     {
         try {
-            mSocket = IO.socket("http://192.168.1.37:3004");
+            mSocket = IO.socket("http://192.168.1.20:3004");
+//            mSocket = IO.socket("https://blockdestroyerserver.herokuapp.com/");
         } catch (URISyntaxException e) {
             Log.e("SocketIo",e.getMessage());
         }
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements NicknameDialog.Ni
                         openDialog();
                     }
                     if(data.equals("ok")){
+                        isLoggedIn=true;
                         Toast.makeText(MainActivity.this, "Welcome!",
                                 Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, LobbyActivity.class);
@@ -224,5 +227,16 @@ public class MainActivity extends AppCompatActivity implements NicknameDialog.Ni
     protected void onStop() {
         super.onStop();
         Log.e("onSTOP mainactivity","Stopped");
+    }
+    @Override
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+        Log.e("onresume","RESUMED");
+        if(isLoggedIn) {
+            mAuth.signOut();
+            JSONObject json=null;
+            mSocket.emit("logout",json);
+        }
+
     }
 }
